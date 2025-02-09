@@ -6,15 +6,8 @@ import dev.nahidibrahimov.factorymethod.factory.DocumentReaderFactory;
 
 public class PDFReaderFactory extends DocumentReaderFactory {
 
-    private DocumentReader documentReader;
-
     @Override
     public DocumentReader createDocumentReader() {
-
-        if (documentReader == null) {
-            documentReader = new PDFDocumentReader();
-        }
-
-        return documentReader;
+        return PDFDocumentReader.getInstance();
     }
 }
