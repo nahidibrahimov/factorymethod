@@ -5,8 +5,16 @@ import dev.nahidibrahimov.factorymethod.PDFDocumentReader;
 import dev.nahidibrahimov.factorymethod.factory.DocumentReaderFactory;
 
 public class PDFReaderFactory extends DocumentReaderFactory {
+
+    private DocumentReader documentReader;
+
     @Override
-    public DocumentReader createDocumentReader(String path) {
-        return new PDFDocumentReader(path);
+    public DocumentReader createDocumentReader() {
+
+        if (documentReader == null) {
+            documentReader = new PDFDocumentReader();
+        }
+
+        return documentReader;
     }
 }

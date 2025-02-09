@@ -4,6 +4,6 @@ import dev.nahidibrahimov.factorymethod.DocumentReader;
 
 public abstract class DocumentReaderFactory {
 
-    public abstract DocumentReader createDocumentReader(String path);
+    public abstract DocumentReader createDocumentReader();
 
 }
